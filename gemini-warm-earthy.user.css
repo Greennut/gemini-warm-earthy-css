@@ -1,0 +1,59 @@
+/* ==UserStyle==
+@name           Gemini - Warm Earthy & Slate Rose Edition
+@namespace      gemini.google.com
+==/UserStyle== */
+
+/* 1. 页面基础暖浅色背景与官方输入框变量注入 */
+:root,
+body,
+chat-app {
+    --gem-sys-color--surface: #FBF9F5 !important;
+    --color-surface: #FBF9F5 !important;
+    --md-sys-color-surface: #FBF9F5 !important;
+    background-color: #FBF9F5 !important;
+
+    /* 官方输入框变量注入纯白：完全继承原生胶囊曲率与展开形态 */
+    --gem-sys-color--surface-container-highest: #FFFFFF !important;
+    --color-surface-container-highest: #FFFFFF !important;
+    --md-sys-color-surface-container-highest: #FFFFFF !important;
+}
+
+div.bottom-container::before {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 2. 根自定义标签：完全透明放行 */
+code-block {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
+
+/* 3. 真实独立外壳（CHILD-1）：纯白底色 + 暖灰边框 + 32px 饱满大圆角 */
+code-block > div.code-block {
+    background-color: #FFFFFF !important;
+    border: 1px solid #E2DED8 !important;
+    border-radius: 32px !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+    box-sizing: border-box !important;
+}
+
+/* 4. 释放内部子容器限制，防止内层切平 32px 弧度 */
+code-block .formatted-code-block-internal-container {
+    overflow: visible !important;
+    border-radius: 32px 32px 0 0 !important;
+    background-color: #FFFFFF !important;
+}
+
+/* 5. 内部各层底色打通为纯白 */
+code-block .animated-opacity,
+code-block pre,
+code-block pre code {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
