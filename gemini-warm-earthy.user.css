@@ -3,166 +3,147 @@
 @namespace      gemini.google.com
 ==/UserStyle== */
 
-/* 1. Base light warm background and official input container variables */
-:root,
-body,
-chat-app {
-  --gem-sys-color--surface: #fbf9f5 !important;
-  --color-surface: #fbf9f5 !important;
-  --md-sys-color-surface: #fbf9f5 !important;
-  background-color: #fbf9f5 !important;
+@-moz-document domain("gemini.google.com") {
 
-  /* Inject pure white for input container */
-  --gem-sys-color--surface-container-highest: #ffffff !important;
-  --color-surface-container-highest: #ffffff !important;
-  --md-sys-color-surface-container-highest: #ffffff !important;
-}
+  :root,
+  body,
+  chat-app {
+    --gem-sys-color--surface: #fbf9f5 !important;
+    --color-surface: #fbf9f5 !important;
+    --md-sys-color-surface: #fbf9f5 !important;
+    background-color: #fbf9f5 !important;
+    --gem-sys-color--surface-container-highest: #ffffff !important;
+    --color-surface-container-highest: #ffffff !important;
+    --md-sys-color-surface-container-highest: #ffffff !important;
+  }
 
-div.bottom-container::before {
-  background: transparent !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-}
+  div.bottom-container::before {
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+  }
 
-/* 2. Custom code-block root container pass-through */
-code-block {
-  background: transparent !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  overflow: visible !important;
-}
+  code-block {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
 
-/* 3. Code block wrapper: white surface, warm border, 32px rounded corners */
-code-block > div.code-block {
-  background-color: #ffffff !important;
-  border: 1px solid #e2ded8 !important;
-  border-radius: 32px !important;
-  overflow: hidden !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
-  box-sizing: border-box !important;
-}
+  code-block > div.code-block {
+    background-color: #ffffff !important;
+    border: 1px solid #e2ded8 !important;
+    border-radius: 32px !important;
+    overflow: hidden !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+    box-sizing: border-box !important;
+  }
 
-/* 4. Release inner container limits to preserve 32px curvature */
-code-block .formatted-code-block-internal-container {
-  overflow: visible !important;
-  border-radius: 32px 32px 0 0 !important;
-  background-color: #ffffff !important;
-}
+  code-block .formatted-code-block-internal-container {
+    overflow: visible !important;
+    border-radius: 32px 32px 0 0 !important;
+    background-color: #ffffff !important;
+  }
 
-/* 5. Internal surface flatten to white */
-code-block .animated-opacity,
-code-block pre,
-code-block pre code {
-  background-color: #ffffff !important;
-  box-shadow: none !important;
-}
+  code-block .animated-opacity,
+  code-block pre,
+  code-block pre code {
+    background-color: #ffffff !important;
+    box-shadow: none !important;
+  }
 
-/* 6. Code block header bar */
-code-block .code-block-decoration {
-  background-color: #ffffff !important;
-  border-bottom: 1px solid #ede8e1 !important;
-  border-radius: 0 !important;
-}
+  code-block .code-block-decoration {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #ede8e1 !important;
+    border-radius: 0 !important;
+  }
 
-code-block .code-block-decoration > span {
-  color: #6e685e !important;
-  font-weight: 500 !important;
-}
+  code-block .code-block-decoration > span {
+    color: #6e685e !important;
+    font-weight: 500 !important;
+  }
 
-/* 7. Action buttons and icons */
-code-block .code-block-decoration button,
-code-block .code-block-decoration gem-icon-button,
-code-block .code-block-decoration mat-icon,
-code-block .code-block-decoration svg {
-  color: #6e685e !important;
-  fill: #6e685e !important;
-}
+  code-block .code-block-decoration button,
+  code-block .code-block-decoration gem-icon-button,
+  code-block .code-block-decoration mat-icon,
+  code-block .code-block-decoration svg {
+    color: #6e685e !important;
+    fill: #6e685e !important;
+  }
 
-/* 8. Code typography settings */
-code-block pre {
-  margin: 0 !important;
-  padding: 0 !important;
-  overflow-x: auto !important;
-}
+  code-block pre {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: auto !important;
+  }
 
-code-block pre,
-code-block pre code {
-  font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, "Roboto Mono", monospace !important;
-  font-size: 16px !important;
-  line-height: 1.75 !important;
-  letter-spacing: 0.02em !important;
-  color: #3a3a3a !important;
-  text-shadow: none !important;
-  -webkit-font-smoothing: antialiased !important;
-}
+  code-block pre,
+  code-block pre code {
+    font-family: "Cascadia Code", "Fira Code", "JetBrains Mono", Consolas, "Roboto Mono", monospace !important;
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+    letter-spacing: 0.02em !important;
+    color: #3a3a3a !important;
+    text-shadow: none !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
 
-/* ================= 9. Syntax Highlighting Color Palette ================= */
+  code-block pre span[class*="hljs-keyword"],
+  code-block pre span[class*="hljs-tag"],
+  code-block pre span[class*="hljs-name"],
+  code-block pre span[class*="hljs-selector-tag"] {
+    color: #a33d2c !important;
+    font-weight: 500 !important;
+  }
 
-/* Keywords and tags: Terracotta Red */
-code-block pre span[class*="hljs-keyword"],
-code-block pre span[class*="hljs-tag"],
-code-block pre span[class*="hljs-name"],
-code-block pre span[class*="hljs-selector-tag"] {
-  color: #a33d2c !important;
-  font-weight: 500 !important;
-}
+  code-block pre span[class*="hljs-title"],
+  code-block pre span[class*="hljs-function"],
+  code-block pre span[class*="hljs-type"],
+  code-block pre span[class*="hljs-class"] {
+    color: #d05a6e !important;
+    font-weight: 500 !important;
+  }
 
-/* Titles, functions, types, and classes: Dusty Rose */
-code-block pre span[class*="hljs-title"],
-code-block pre span[class*="hljs-function"],
-code-block pre span[class*="hljs-type"],
-code-block pre span[class*="hljs-class"] {
-  color: #d05a6e !important;
-  font-weight: 500 !important;
-}
+  code-block pre span[class*="hljs-attr"],
+  code-block pre span[class*="hljs-attribute"],
+  code-block pre span[class*="hljs-property"],
+  code-block pre span[class*="hljs-selector-attr"],
+  code-block pre span[class*="hljs-selector-class"] {
+    color: #4b789b !important;
+  }
 
-/* Attributes, properties, and selector classes: Clear Slate Blue */
-code-block pre span[class*="hljs-attr"],
-code-block pre span[class*="hljs-attribute"],
-code-block pre span[class*="hljs-property"],
-code-block pre span[class*="hljs-selector-attr"],
-code-block pre span[class*="hljs-selector-class"] {
-  color: #4b789b !important;
-}
+  code-block pre span[class*="hljs-string"] {
+    color: #6c8b35 !important;
+  }
 
-/* Strings: Warm Olive Green */
-code-block pre span[class*="hljs-string"] {
-  color: #6c8b35 !important;
-}
+  code-block pre span[class*="hljs-number"],
+  code-block pre span[class*="hljs-literal"] {
+    color: #b8860b !important;
+  }
 
-/* Numbers and literals: Autumn Gold */
-code-block pre span[class*="hljs-number"],
-code-block pre span[class*="hljs-literal"] {
-  color: #b8860b !important;
-}
+  code-block pre span[class*="hljs-meta"] {
+    color: #d05a6e !important;
+    font-weight: 500 !important;
+  }
 
-/* Meta tags: Dusty Rose Accent */
-code-block pre span[class*="hljs-meta"] {
-  color: #d05a6e !important;
-  font-weight: 500 !important;
-}
+  code-block pre span[class*="hljs-selector-pseudo"],
+  code-block pre span[class*="hljs-selector-id"] {
+    color: #8c5338 !important;
+  }
 
-/* Pseudo-elements and selectors: Warm Sienna */
-code-block pre span[class*="hljs-selector-pseudo"],
-code-block pre span[class*="hljs-selector-id"] {
-  color: #8c5338 !important;
-}
+  code-block pre span[class*="hljs-built_in"] {
+    color: #a1662f !important;
+  }
 
-/* Built-in identifiers and globals: Antique Bronze */
-code-block pre span[class*="hljs-built_in"] {
-  color: #a1662f !important;
-}
+  code-block pre span[class*="hljs-variable"],
+  code-block pre span[class*="hljs-params"] {
+    color: #4a4644 !important;
+  }
 
-/* Variables and parameters: Muted Charcoal */
-code-block pre span[class*="hljs-variable"],
-code-block pre span[class*="hljs-params"] {
-  color: #4a4644 !important;
-}
-
-/* Comments: Slate Gray */
-code-block pre span[class*="hljs-comment"] {
-  color: #9e9a92 !important;
-  font-style: italic !important;
+  code-block pre span[class*="hljs-comment"] {
+    color: #9e9a92 !important;
+    font-style: italic !important;
+  }
 }
