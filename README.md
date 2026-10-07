@@ -78,6 +78,7 @@ Click the badge above if you have the **Stylus** browser extension installed.
 
 | Overview | Code Block & Input Interaction |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/f1122a5d-b13f-45bd-9269-2a8dc2af4540" width="400" /> | <img src="https://github.com/user-attachments/assets/c3b4cb70-9b05-410f-8ca4-c0e12e92181c" width="400" /> | |
+| <img src="https://github.com/user-attachments/assets/f1122a5d-b13f-45bd-9269-2a8dc2af4540" width="400" /> | <img src="https://github.com/user-attachments/assets/d84df79f-745d-4bd4-8600-1df20bfd3cfc" width="400" >
+ | |
 
 ---
